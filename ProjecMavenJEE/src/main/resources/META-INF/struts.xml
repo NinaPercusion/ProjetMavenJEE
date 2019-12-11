@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+   <package name="default" namespace="/" extends="struts-default">
+<default-action-ref name="index"></default-action-ref>
+	
+	<action name="index">
+	<result>index.jsp</result>
+	</action>
+	
+	
+	<action name="monuments" class="org.sid.web.MonumentAction" method="index">
+	<result name="success">monument.jsp</result>
+	</action>
+	<action name="saveMonument" class="org.sid.web.MonumentAction" method="save">
+	<result name="success">monuments.jsp</result>
+	<result name="input">monuments.jsp</result>
+	
+	</action>
+	<action name="delete" class="org.sid.web.MonumentAction" method="delete">
+	<result name="success">monuments.jsp</result>
+	</action>
+	<action name="edit" class="org.sid.web.MonumentAction" method="edit">
+	<result name="success">monuments.jsp</result>
+	</action>
+	<action name="Accueil" class="org.sid.web.AccueilAction" >  
+    <result name="success">index.jsp</result>  
+    <result name="input">index.jsp</result>  
+    </action> 
+    
+    
+    <action name="departement" class="org.sid.web.MonumentAction" method="departement">
+	<result name="success">departement.jsp</result>
+	</action>
+    <action name="departements" class="org.sid.web.DepartementAction" method="index">
+	<result name="success">departements.jsp</result>
+	</action>
+	<action name="savedep" class="org.sid.web.DepartementAction" method="save">
+	<result name="success">departements.jsp</result>
+	<result name="input">departements.jsp</result>
+	</action>
+	<action name="deletedep" class="org.sid.web.DepartementAction" method="delete">
+	<result name="success">departements.jsp</result>
+	</action>
+	<action name="editdep" class="org.sid.web.DepartementAction" method="edit">
+	<result name="success">departements.jsp</result>
+	</action>
+	
+	
+	<action name="lieu" class="org.sid.web.MonumentAction" method="lieu">
+	<result name="success">lieu.jsp</result>
+	</action>
+	 <action name="lieux" class="org.sid.web.LieuAction" method="index">
+	<result name="success">lieu.jsp</result>
+	</action>
+	<action name="savelieu" class="org.sid.web.LieuAction" method="save">
+	<result name="success">lieu.jsp</result>
+	<result name="input">lieu.jsp</result>
+	</action>
+	<action name="deleteLieu" class="org.sid.web.LieuAction" method="delete">
+	<result name="success">lieu.jsp</result>
+	</action>
+	<action name="editLieu" class="org.sid.web.LieuAction" method="edit">
+	<result name="success">lieu.jsp</result>
+	</action>
+	
+	
+	<action name="celebrite" class="org.sid.web.MonumentAction" method="celebrite">
+	<result name="success">celebrite.jsp</result>
+	</action>
+    <action name="celebrites" class="org.sid.web.CelebriteAction" method="index">
+	<result name="success">celebrite.jsp</result>
+	</action>
+	<action name="saveCelebrite" class="org.sid.web.CelebriteAction" method="save">
+	<result name="success">celebrite.jsp</result>
+	<result name="input">celebrite.jsp</result>
+	</action>
+	<action name="deleteCelebrite" class="org.sid.web.CelebriteAction" method="delete">
+	<result name="success">celebrite.jsp</result>
+	</action>
+	<action name="editCelebrite" class="org.sid.web.CelebriteAction" method="edit">
+	<result name="success">celebrite.jsp</result>
+	</action>
+
+	
+</package>
+</struts>
